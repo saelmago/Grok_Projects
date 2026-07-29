@@ -35,9 +35,13 @@ Grok Projects/
 
 Abre: **`inventario/Arsenal_Multioficio_2026.xlsx`**
 
-- Hoja **Resumen** — totales y sitios de marca  
-- Hoja **Inventario** — 39 ítems + enlaces (columna H/I)  
-- Hoja **Pendientes** — 5 compras priorizadas  
+- Hoja **Resumen** — totales, esquema de códigos y sitios de marca  
+- Hoja **Inventario** — líneas con **Código** + **Cantidad** + enlaces  
+- Hoja **Pendientes** — 5 compras con **código reservado**  
+- Hoja **Consumibles** — kits a granel (`CNS-…`); **Clase** + tipo terminal + color; **Tengo** / **Reponer**  
+
+Código = ID por **línea** (`MW-M12-001`, `CNS-SPD-001`, …), no por unidad física.  
+Copia Markdown de consumibles: `inventario/consumibles.md`.  
 
 ## Ecosistema
 

@@ -6,7 +6,10 @@ https://grok.com/project/ba4f9b70-109f-446e-92dd-0381806d0a94
 
 **Dueño:** Saúl Marín González  
 **Carpeta local:** `Herramientas/`  
-**Fuente de verdad:** `inventario/Arsenal_Multioficio_2026.xlsx` (+ `inventario/inventario_completo.md`)
+**Fuente de verdad:** `inventario/Arsenal_Multioficio_2026.xlsx` (+ `inventario/inventario_completo.md`)  
+**ID interno:** columna **Código** por **línea** de inventario (`MARCA-FAMILIA-###`), no por unidad física. **Cantidad** en columna aparte.  
+**Consumibles:** pestaña Excel `Consumibles` + `inventario/consumibles.md` — por kit (`CNS-*-###`), no pieza a pieza.  
+Columnas clave: **Clase** + **Tipo terminal** (solo conectores) + color + **Ubicación** (código del contenedor, ej. `MW-PKO-005`). Estados: **Tengo** / **Reponer**.
 
 ---
 
@@ -31,8 +34,9 @@ Flujo de trabajo con Grok: ver `../../Grok-Build-Workflow.md` en la raíz de `Gr
 
 - Inventario documentado: **40 ítems** (según el export del chat).
 - Última compra registrada: **Milwaukee 2522-20** (M12 FUEL 3" Compact Cut Off Tool).
-- PACKOUT actual: Backpack `48-22-8301` + Compact Organizer `48-22-8435`.
-- M18: Sawzall `2719-20` + batería XC 5.0 + cargador 12-18V (kit comprado).
+- PACKOUT actual: Backpack `48-22-8301` + Compact Organizer `48-22-8435` + Organizer 19" `48-22-8431` (`MW-PKO-005`, comprado en Novex).
+- Baterías M12: **3× CP 2.0 Ah** + **1× XC 4.0 Ah**.
+- M18: Sawzall `2719-20` + **3× XC 5.0 Ah** + cargador 12-18V.
 
 ## Pendientes (orden de prioridad)
 
@@ -40,7 +44,8 @@ Flujo de trabajo con Grok: ver `../../Grok-Build-Workflow.md` en la raíz de `Gr
 2. Klein **CL810** – Clamp Meter 600A (~₡80,000)  
 3. PACKOUT **48-22-8420** – Rolling Drawer Tool Box  
 4. PACKOUT **48-22-8415** – 2-Wheel Utility Cart  
-5. Milwaukee **2572B-21** – M12 AIRSNAKE (~₡280,000)
+5. Milwaukee **2572B-21** – M12 AIRSNAKE (~₡280,000)  
+6. **CNS-ORD-AMZ-001** – Terminar de cargar orden consumibles Amazon (conectores haisstronica ya parcial en `Consumibles`)
 
 ## Observaciones al importar (revisar)
 
@@ -89,3 +94,14 @@ Grok Projects/
 | 2026-07-28 | Creado `Grok-Build-Workflow.md` (flujo y preferencias) |
 | 2026-07-28 | Workflow adaptado: misión traer conversaciones de Grok web a local |
 | 2026-07-28 | `Grok-Build-Workflow.md` movido a la raíz de `Grok Projects/` |
+| 2026-07-28 | Baterías M18 XC 5.0 Ah actualizadas a **3 uds** |
+| 2026-07-28 | Baterías M12: **3× CP 2.0** + 1× XC 4.0 añadidas al inventario |
+| 2026-07-28 | Columna **Código** por línea + **Cantidad**; Excel/MD regenerados |
+| 2026-07-28 | Compra PACKOUT Organizer 19" `48-22-8431` → `MW-PKO-005` (Novex) |
+| 2026-07-28 | Pestaña **Consumibles**; spade connectors **por color** (ROJ/AZU/AMA) Amazon B0D1K6L6TL |
+| 2026-07-28 | Columna **Clase** en consumibles (Conector eléctrico, Cinta, Fijación…) |
+| 2026-07-28 | Columna **Ubicación** en consumibles; spades en `MW-PKO-005` (Organizer 19") |
+| 2026-07-28 | Consumibles Butt solder seal 120PCS por color (`CNS-BTT-*`) Amazon B07C3NBTJ9 → `MW-PKO-005` |
+| 2026-07-28 | Consumibles Butt heat-shrink CRIMP 200PCS BHT (`CNS-BHC-*`) Amazon B07RX6QYX5 → `MW-PKO-005` |
+| 2026-07-28 | Consumibles Butt non-insulated 50PCS 12-10 (`CNS-BNI-1210-001`) Amazon B0F1N2WH51 → `MW-PKO-005` |
+| 2026-07-28 | Pendiente **CNS-ORD-AMZ-001**: terminar de cargar orden consumibles Amazon |
