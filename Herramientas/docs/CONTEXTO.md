@@ -16,7 +16,7 @@ Columnas clave: **Clase** + **Tipo terminal** (solo conectores) + color + **Ubic
 ## Objetivo del proyecto
 
 1. **Migración:** Traer y conservar en local todas las conversaciones y el conocimiento del proyecto en Grok web (respaldo oficial cuando el panel de archivos de grok.com falla).
-2. **Operación:** Mantener un inventario vivo del arsenal multioficio (fontanería, electricidad, corte, organización PACKOUT y seguridad), con estados **Ya tengo** / **Comprado** y una lista priorizada de **Pendientes**.
+2. **Operación:** Mantener un inventario vivo del arsenal multioficio (fontanería, electricidad, corte, organización PACKOUT y seguridad), con estado **Activo** (en arsenal) y una lista priorizada de **Pendientes**.
 
 Flujo de trabajo con Grok: ver `../../Grok-Build-Workflow.md` en la raíz de `Grok Projects/` (incluye convención `docs/conversaciones/`).
 
@@ -27,7 +27,7 @@ Flujo de trabajo con Grok: ver `../../Grok-Build-Workflow.md` en la raíz de `Gr
 | Plataforma principal | Milwaukee M12 + M18 FUEL |
 | Prueba y eléctrico aislado | Klein Tools |
 | Alicates / llaves | Knipex + Wera Joker |
-| Organización | Milwaukee PACKOUT |
+| Organización | Milwaukee PACKOUT · Holstery (ModPouch) |
 | Otros | Skil, Antive, Huepar, Franklin, LEXIVON |
 
 ## Estado al 28 jul 2026
@@ -58,7 +58,7 @@ Flujo de trabajo con Grok: ver `../../Grok-Build-Workflow.md` en la raíz de `Gr
 | Acción | Cómo |
 |--------|------|
 | Actualizar inventario | Editar `inventario_arsenal_2026.md` |
-| Mover compra | Estado → `Comprado` y quitar de Pendientes |
+| Mover compra | Estado → `Activo` y quitar de Pendientes |
 | Añadir pendiente | Tabla Pendientes + prioridad |
 | Exportar tabla | Pedir CSV/XLSX a partir del markdown |
 | Kit por oficio | Generar listas Fontanería / Electricidad / Corte / PACKOUT |
@@ -105,3 +105,12 @@ Grok Projects/
 | 2026-07-28 | Consumibles Butt heat-shrink CRIMP 200PCS BHT (`CNS-BHC-*`) Amazon B07RX6QYX5 → `MW-PKO-005` |
 | 2026-07-28 | Consumibles Butt non-insulated 50PCS 12-10 (`CNS-BNI-1210-001`) Amazon B0F1N2WH51 → `MW-PKO-005` |
 | 2026-07-28 | Pendiente **CNS-ORD-AMZ-001**: terminar de cargar orden consumibles Amazon |
+| 2026-07-29 | Consumibles Ring non-insulated 5/16" 12-10 kit (`CNS-RNI-516-001`) Amazon B0F2T8LR9W → `MW-PKO-005` |
+| 2026-07-29 | Consumibles Fork non-insulated #10 12-10 kit (`CNS-FNI-10-001`) Amazon B0F2T498YF → `MW-PKO-005` |
+| 2026-07-29 | Inventario: Holstery **ModPouch** Standard (`HO-ORG-001`) Amazon B0F5YLJJ4F → Activo |
+| 2026-07-29 | Inventario: Holstery **DriverMaster** (`HO-ORG-002`) Amazon B0DJ3RM3R9 → Activo |
+| 2026-07-29 | Inventario: Holstery **MagMaster** V2 (`HO-ORG-003`) Amazon B0DJ3RM73J → Activo |
+| 2026-07-29 | Inventario: Youneedthat guantes aislantes 400V M 2 pares (`YN-SEG-001`) Amazon B0DSYSKYW2 → Activo |
+| 2026-07-29 | Inventario: Railer Bitrail 20-hole x2 + carabiners (`RA-ORG-001`) Amazon B0CNDY32SX → Activo |
+| 2026-07-29 | Estado de inventario: **Comprado** y **Ya tengo** unificados a **Activo** |
+| 2026-07-29 | Inventario: MTO Wing Nut Driver Set 4PCS (`MT-ACC-001`) Amazon B0FD3BHQMV → Activo |

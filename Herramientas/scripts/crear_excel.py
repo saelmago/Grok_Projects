@@ -17,90 +17,102 @@ from openpyxl.worksheet.datavalidation import DataValidation
 
 # (codigo, marca, tipo, cat, nombre, modelo, cantidad, estado, url)
 INVENTARIO = [
-    ("MW-FTN-001", "Milwaukee", "Herramienta", "Fontaneria", "M12 Stick Transfer Pump", "2579-20", 1, "Comprado",
+    ("MW-FTN-001", "Milwaukee", "Herramienta", "Fontaneria", "M12 Stick Transfer Pump", "2579-20", 1, "Activo",
      "https://www.milwaukeetool.com/Products/Power-Tools/Plumbing/Pumps/M12-FUEL-Stick-Transfer-Pump/2579-20"),
-    ("MW-FTN-002", "Milwaukee", "Herramienta", "Fontaneria", "Llave Faucet Swap-Out", "48-22-7100", 1, "Ya tengo",
+    ("MW-FTN-002", "Milwaukee", "Herramienta", "Fontaneria", "Llave Faucet Swap-Out", "48-22-7100", 1, "Activo",
      "https://www.milwaukeetool.com/Products/Hand-Tools/Plumbing/Wrenches/Faucet-and-Sink-Installer/48-22-7100"),
-    ("KP-FTN-001", "Knipex", "Herramienta", "Fontaneria", 'Cobra Water Pump Pliers 10"', "87 02 250", 1, "Ya tengo",
+    ("KP-FTN-001", "Knipex", "Herramienta", "Fontaneria", 'Cobra Water Pump Pliers 10"', "87 02 250", 1, "Activo",
      "https://www.knipex.com/products/water-pump-pliers-and-pipe-wrenches/water-pump-pliers/knipex-cobra-water-pump-pliers/8702250"),
-    ("KP-FTN-002", "Knipex", "Herramienta", "Fontaneria", 'TwinGrip Pliers 8"', "83 01 200", 1, "Ya tengo",
+    ("KP-FTN-002", "Knipex", "Herramienta", "Fontaneria", 'TwinGrip Pliers 8"', "83 01 200", 1, "Activo",
      "https://www.knipex.com/products/pliers/front-and-side-gripping-pliers/knipex-twingrip-front-and-side-gripping-pliers/8201200"),
-    ("KP-FTN-003", "Knipex", "Herramienta", "Fontaneria", 'Pliers Wrench 10"', "86 01 250", 1, "Comprado",
+    ("KP-FTN-003", "Knipex", "Herramienta", "Fontaneria", 'Pliers Wrench 10"', "86 01 250", 1, "Activo",
      "https://www.knipex.com/products/pliers-wrenches-and-pipe-wrenches/pliers-wrenches/pliers-wrench-pliers-and-a-wrench-in-a-single-tool/8601250"),
-    ("WR-FTN-001", "Wera", "Herramienta", "Fontaneria", "Joker Self-Setting Wrench M/L/XL", "6004 serie", 1, "Ya tengo",
+    ("WR-FTN-001", "Wera", "Herramienta", "Fontaneria", "Joker Self-Setting Wrench M/L/XL", "6004 serie", 1, "Activo",
      "https://www.wera.de/en/tools/tool-types/wrench/joker-adjustable-open-end-wrenches"),
-    ("KL-ELC-001", "Klein", "Herramienta", "Electricidad", "Non-Contact Voltage Tester", "NCVT-39", 1, "Ya tengo",
+    ("KL-ELC-001", "Klein", "Herramienta", "Electricidad", "Non-Contact Voltage Tester", "NCVT-39", 1, "Activo",
      "https://www.kleintools.com/catalog/electrical-testers/dual-range-non-contact-voltage-tester-flashlight-12-1000v-ac"),
-    ("KL-ELC-002", "Klein", "Herramienta", "Electricidad", "GFCI Receptacle Tester", "RT250", 1, "Ya tengo",
+    ("KL-ELC-002", "Klein", "Herramienta", "Electricidad", "GFCI Receptacle Tester", "RT250", 1, "Activo",
      "https://www.kleintools.com/catalog/electrical-testers/gfci-receptacle-tester-lcd"),
-    ("KL-ELC-003", "Klein", "Herramienta", "Electricidad", "Circuit Breaker Finder", "ET310", 1, "Ya tengo",
+    ("KL-ELC-003", "Klein", "Herramienta", "Electricidad", "Circuit Breaker Finder", "ET310", 1, "Activo",
      "https://www.kleintools.com/catalog/electrical-testers/digital-circuit-breaker-finder-gfci-outlet-tester"),
-    ("KL-ELC-004", "Klein", "Herramienta", "Electricidad", "Tone and Probe Kit", "VDV500-705P", 1, "Ya tengo",
+    ("KL-ELC-004", "Klein", "Herramienta", "Electricidad", "Tone and Probe Kit", "VDV500-705P", 1, "Activo",
      "https://www.kleintools.com/catalog/tone-probe/tone-probe-test-and-trace-kit"),
-    ("KL-ELC-005", "Klein", "Herramienta", "Electricidad", "6-in-1 Insulated Screwdriver", "32306INS", 1, "Ya tengo",
+    ("KL-ELC-005", "Klein", "Herramienta", "Electricidad", "6-in-1 Insulated Screwdriver", "32306INS", 1, "Activo",
      "https://www.kleintools.com/catalog/electricians-screwdrivers/6-1-insulated-auto-lock-screwdriver"),
-    ("KL-ELC-006", "Klein", "Herramienta", "Electricidad", '9" Insulated Side-Cutting Pliers', "2139NERINS", 1, "Ya tengo",
+    ("KL-ELC-006", "Klein", "Herramienta", "Electricidad", '9" Insulated Side-Cutting Pliers', "2139NERINS", 1, "Activo",
      "https://www.kleintools.com/catalog/electricians-pliers/insulated-pliers-side-cutters-9-inch"),
-    ("KL-ELC-007", "Klein", "Herramienta", "Electricidad", '8" Insulated Diagonal Cutting Pliers', "2288RINS", 1, "Ya tengo",
+    ("KL-ELC-007", "Klein", "Herramienta", "Electricidad", '8" Insulated Diagonal Cutting Pliers', "2288RINS", 1, "Activo",
      "https://www.kleintools.com/catalog/electricians-pliers/diagonal-cutting-pliers-insulated-high-leverage-8-inch"),
-    ("KL-ELC-008", "Klein", "Herramienta", "Electricidad", '8" Insulated Long Nose Pliers', "2038RINS", 1, "Ya tengo",
+    ("KL-ELC-008", "Klein", "Herramienta", "Electricidad", '8" Insulated Long Nose Pliers', "2038RINS", 1, "Activo",
      "https://www.kleintools.com/catalog/insulated-pliers/pliers-long-nose-side-cutters-insulated-8-inch"),
-    ("KL-ELC-009", "Klein", "Herramienta", "Electricidad", "Insulated Wire Stripper", "11055RINS", 1, "Ya tengo",
+    ("KL-ELC-009", "Klein", "Herramienta", "Electricidad", "Insulated Wire Stripper", "11055RINS", 1, "Activo",
      "https://www.kleintools.com/catalog/electricians-cutting-and-crimping-tools/insulated-klein-kurve-wire-stripper-and-cutter"),
-    ("KL-ELC-010", "Klein", "Herramienta", "Electricidad", "8-in-1 Insulated Screwdriver Set", "32288", 1, "Ya tengo",
+    ("KL-ELC-010", "Klein", "Herramienta", "Electricidad", "8-in-1 Insulated Screwdriver Set", "32288", 1, "Activo",
      "https://www.kleintools.com/catalog/electricians-tool-sets/8-1-insulated-interchangeable-screwdriver-set"),
-    ("KL-ELC-011", "Klein", "Herramienta", "Electricidad", "Insulated Crimping and Cutting Tool", "1005RINS", 1, "Comprado",
+    ("KL-ELC-011", "Klein", "Herramienta", "Electricidad", "Insulated Crimping and Cutting Tool", "1005RINS", 1, "Activo",
      "https://www.kleintools.com/catalog/electricians-cutting-and-crimping-tools/crimping-and-cutting-tool-connectors-insulated"),
-    ("KL-ELC-012", "Klein", "Herramienta", "Electricidad", "Adjustable Length Screwdriver", "32751", 1, "Comprado",
+    ("KL-ELC-012", "Klein", "Herramienta", "Electricidad", "Adjustable Length Screwdriver", "32751", 1, "Activo",
      "https://www.kleintools.com/catalog/multi-bit-screwdrivers/adjustable-screwdriver-2-phillips-14-inch-slotted"),
-    ("KL-ELC-013", "Klein", "Accesorio", "Electricidad", "Grab-And-Go Impact Socket Set (metrico)", "33809M", 1, "Comprado",
+    ("KL-ELC-013", "Klein", "Accesorio", "Electricidad", "Grab-And-Go Impact Socket Set (metrico)", "33809M", 1, "Activo",
      "https://www.kleintools.com/catalog/impact-socket-sets/grab-and-go-impact-socket-set-metric-10-piece"),
-    ("MW-M12-001", "Milwaukee", "Herramienta", "Electrica M12", "FUEL Installation Drill/Driver 4-en-1", "2505-20", 1, "Ya tengo",
+    ("MW-M12-001", "Milwaukee", "Herramienta", "Electrica M12", "FUEL Installation Drill/Driver 4-en-1", "2505-20", 1, "Activo",
      "https://www.milwaukeetool.com/Products/Power-Tools/Drilling/Installation-Drill-Drivers/M12-FUEL-Installation-Drill-Driver/2505-20"),
-    ("MW-M12-002", "Milwaukee", "Herramienta", "Electrica M12", "FUEL Stubby Impact Wrench", "2563-20", 1, "Ya tengo",
+    ("MW-M12-002", "Milwaukee", "Herramienta", "Electrica M12", "FUEL Stubby Impact Wrench", "2563-20", 1, "Activo",
      "https://www.milwaukeetool.com/Search?q=2563-20"),
-    ("MW-M12-003", "Milwaukee", "Herramienta", "Electrica M12", "FUEL Hammer Drill", "3404-20", 1, "Ya tengo",
+    ("MW-M12-003", "Milwaukee", "Herramienta", "Electrica M12", "FUEL Hammer Drill", "3404-20", 1, "Activo",
      "https://www.milwaukeetool.com/Search?q=3404-20"),
-    ("MW-M12-004", "Milwaukee", "Herramienta", "Electrica M12", "FUEL Impact Driver", "3453-20", 1, "Ya tengo",
+    ("MW-M12-004", "Milwaukee", "Herramienta", "Electrica M12", "FUEL Impact Driver", "3453-20", 1, "Activo",
      "https://www.milwaukeetool.com/Search?q=3453-20"),
-    ("MW-M12-005", "Milwaukee", "Herramienta", "Electrica M12", "FUEL Oscillating Multi-Tool", "2526-20", 1, "Ya tengo",
+    ("MW-M12-005", "Milwaukee", "Herramienta", "Electrica M12", "FUEL Oscillating Multi-Tool", "2526-20", 1, "Activo",
      "https://www.milwaukeetool.com/Search?q=2526-20"),
-    ("MW-M12-006", "Milwaukee", "Herramienta", "Electrica M12", "ROVER Flood Light", "2367-20", 1, "Ya tengo",
+    ("MW-M12-006", "Milwaukee", "Herramienta", "Electrica M12", "ROVER Flood Light", "2367-20", 1, "Activo",
      "https://www.milwaukeetool.com/Search?q=2367-20"),
-    ("MW-M12-007", "Milwaukee", "Herramienta", "Electrica M12", 'FUEL 3" Compact Cut Off Tool', "2522-20", 1, "Comprado",
+    ("MW-M12-007", "Milwaukee", "Herramienta", "Electrica M12", 'FUEL 3" Compact Cut Off Tool', "2522-20", 1, "Activo",
      "https://www.milwaukeetool.com/Search?q=2522-20"),
-    ("MW-M18-001", "Milwaukee", "Herramienta", "Electrica M18", "M18 FUEL Sawzall (Sierra Sable)", "2719-20", 1, "Comprado",
+    ("MW-M18-001", "Milwaukee", "Herramienta", "Electrica M18", "M18 FUEL Sawzall (Sierra Sable)", "2719-20", 1, "Activo",
      "https://www.milwaukeetool.com/Search?q=2719-20"),
-    ("MW-M12-BAT-001", "Milwaukee", "Accesorio", "Electrica M12", "Bateria M12 CP 2.0 Ah", "CP 2.0", 3, "Ya tengo",
+    ("MW-M12-BAT-001", "Milwaukee", "Accesorio", "Electrica M12", "Bateria M12 CP 2.0 Ah", "CP 2.0", 3, "Activo",
      "https://www.milwaukeetool.com/Products/Power-Tools/Batteries-Chargers/Batteries"),
-    ("MW-M12-BAT-002", "Milwaukee", "Accesorio", "Electrica M12", "Bateria M12 XC 4.0 Ah", "XC 4.0", 1, "Ya tengo",
+    ("MW-M12-BAT-002", "Milwaukee", "Accesorio", "Electrica M12", "Bateria M12 XC 4.0 Ah", "XC 4.0", 1, "Activo",
      "https://www.milwaukeetool.com/Products/Power-Tools/Batteries-Chargers/Batteries"),
-    ("MW-M18-BAT-001", "Milwaukee", "Accesorio", "Electrica M18", "Bateria M18 XC 5.0 Ah", "XC 5.0", 3, "Ya tengo",
+    ("MW-M18-BAT-001", "Milwaukee", "Accesorio", "Electrica M18", "Bateria M18 XC 5.0 Ah", "XC 5.0", 3, "Activo",
      "https://www.milwaukeetool.com/Products/Power-Tools/Batteries-Chargers/Batteries"),
-    ("MW-M18-CHG-001", "Milwaukee", "Accesorio", "Electrica M18", "Cargador 12-18V", "12-18V", 1, "Comprado",
+    ("MW-M18-CHG-001", "Milwaukee", "Accesorio", "Electrica M18", "Cargador 12-18V", "12-18V", 1, "Activo",
      "https://www.milwaukeetool.com/Products/Power-Tools/Batteries-Chargers/Chargers"),
-    ("MW-PKO-001", "Milwaukee", "Organizacion", "Organizacion", "PACKOUT Backpack", "48-22-8301", 1, "Comprado",
+    ("MW-PKO-001", "Milwaukee", "Organizacion", "Organizacion", "PACKOUT Backpack", "48-22-8301", 1, "Activo",
      "https://www.milwaukeetool.com/Search?q=48-22-8301"),
-    ("MW-PKO-002", "Milwaukee", "Organizacion", "Organizacion", "PACKOUT Compact Organizer", "48-22-8435", 1, "Comprado",
+    ("MW-PKO-002", "Milwaukee", "Organizacion", "Organizacion", "PACKOUT Compact Organizer", "48-22-8435", 1, "Activo",
      "https://www.milwaukeetool.com/Search?q=48-22-8435"),
-    ("MW-PKO-005", "Milwaukee", "Organizacion", "Organizacion", "PACKOUT Organizer 19 pulg", "48-22-8431", 1, "Comprado",
+    ("MW-PKO-005", "Milwaukee", "Organizacion", "Organizacion", "PACKOUT Organizer 19 pulg", "48-22-8431", 1, "Activo",
      "https://www.milwaukeetool.com/Search?q=48-22-8431"),
-    ("SK-ELC-001", "Skil", "Herramienta", "Electrica", "Martillo Automatico", "AH6552A-00", 1, "Ya tengo",
+    ("HO-ORG-001", "Holstery", "Organizacion", "Organizacion", "ModPouch Clip-On Modular Tool Pouch (Standard)", "ModPouch", 1, "Activo",
+     "https://holstery.com/products/mod-pouch-clip-on-modular-tool-pouch"),
+    ("HO-ORG-002", "Holstery", "Organizacion", "Organizacion", "DriverMaster Clip-On Drill Holster", "DriverMaster", 1, "Activo",
+     "https://holstery.com/products/drivermaster-v2-clip-on-drill-holster"),
+    ("HO-ORG-003", "Holstery", "Organizacion", "Organizacion", "MagMaster Magnetic Tool and Hardware Holder", "MagMaster V2", 1, "Activo",
+     "https://holstery.com/products/magmaster-v2-magnetic-tool-and-hardware-holder"),
+    ("RA-ORG-001", "Railer", "Organizacion", "Organizacion", "Bitrail 20-hole bit holder set (2 pc) + carabiners", "RB2BKORC", 2, "Activo",
+     "https://www.amazon.com/dp/B0CNDY32SX"),
+    ("SK-ELC-001", "Skil", "Herramienta", "Electrica", "Martillo Automatico", "AH6552A-00", 1, "Activo",
      "https://www.skil.com/search?q=AH6552A"),
-    ("AN-ELC-001", "Antive", "Herramienta", "Electrica", "Tijeras Electricas Inalambricas", "E-S01", 1, "Ya tengo",
+    ("AN-ELC-001", "Antive", "Herramienta", "Electrica", "Tijeras Electricas Inalambricas", "E-S01", 1, "Activo",
      "https://www.amazon.com/s?k=Antive+E-S01+electric+scissors"),
-    ("HP-PRE-001", "Huepar", "Herramienta", "Precision", "Nivel Laser Verde Cross-Line", "BOX-1G", 1, "Ya tengo",
+    ("HP-PRE-001", "Huepar", "Herramienta", "Precision", "Nivel Laser Verde Cross-Line", "BOX-1G", 1, "Activo",
      "https://huepar.com/products/huepar-box1g-laser-level"),
-    ("FR-PRE-001", "Franklin", "Herramienta", "Precision", "Nivel Digital Electronico", "iA12", 1, "Ya tengo",
+    ("FR-PRE-001", "Franklin", "Herramienta", "Precision", "Nivel Digital Electronico", "iA12", 1, "Activo",
      "https://www.amazon.com/s?k=Franklin+Sensors+iA12"),
-    ("LX-SLD-001", "LEXIVON", "Herramienta", "Soldadura", "Soldador de Butano 7 puntas", "LX-770", 1, "Ya tengo",
+    ("LX-SLD-001", "LEXIVON", "Herramienta", "Soldadura", "Soldador de Butano 7 puntas", "LX-770", 1, "Activo",
      "https://www.lexivon.com/products/lx-770"),
-    ("MW-SEG-001", "Milwaukee", "Seguridad", "Seguridad", "Lentes de seguridad", "48-73-2013", 1, "Ya tengo",
+    ("MW-SEG-001", "Milwaukee", "Seguridad", "Seguridad", "Lentes de seguridad", "48-73-2013", 1, "Activo",
      "https://www.milwaukeetool.com/Search?q=48-73-2013"),
-    ("MW-SEG-002", "Milwaukee", "Seguridad", "Seguridad", "Guantes PACKOUT Cut Level 1 Smartswipe", "48-73-2013", 1, "Ya tengo",
+    ("MW-SEG-002", "Milwaukee", "Seguridad", "Seguridad", "Guantes PACKOUT Cut Level 1 Smartswipe", "48-73-2013", 1, "Activo",
      "https://www.milwaukeetool.com/Search?q=PACKOUT+Cut+Level+Smartswipe+gloves"),
-    ("MW-ACC-001", "Milwaukee", "Accesorio", "Accesorio", "Juego de 3 hojas para Multi-Tool", "49-10-9001", 1, "Comprado",
+    ("YN-SEG-001", "Youneedthat", "Seguridad", "Seguridad", "Guantes aislantes electricos 400V latex (M, 2 pares)", "400V-M/2 pairs", 2, "Activo",
+     "https://www.amazon.com/dp/B0DSYSKYW2"),
+    ("MW-ACC-001", "Milwaukee", "Accesorio", "Accesorio", "Juego de 3 hojas para Multi-Tool", "49-10-9001", 1, "Activo",
      "https://www.milwaukeetool.com/Search?q=49-10-9001"),
+    ("MT-ACC-001", "MTO", "Accesorio", "Accesorio", "Wing Nut Driver Set 4PCS (9/12/15/18mm) 1/4 hex", "MTO-WND-4P", 1, "Activo",
+     "https://www.amazon.com/dp/B0FD3BHQMV"),
 ]
 
 # (codigo_reservado, prio, marca, nombre, modelo, precio, notas, url)
@@ -313,6 +325,36 @@ CONSUMIBLES = [
         "Butt NO aislado, cobre estanado. Solo 12-10 AWG x50. Recomienda heat shrink aparte. Ubic. MW-PKO-005.",
         "https://www.amazon.com/dp/B0F1N2WH51",
     ),
+    # Ring non-insulated 5/16" + heat shrink 3:1 — haisstronica B0F2T8LR9W (50 ring + 50 HST = 100PCS)
+    (
+        "CNS-RNI-516-001",
+        "Conector electrico",
+        "Ring (ojal / non-insulated crimp)",
+        "Kit ring 5/16\" stud AWG 12-10 + heat shrink 3:1 (50+50)",
+        "haisstronica B0F2T8LR9W",
+        "paquete",
+        50,
+        12,
+        "Tengo",
+        UBIC_PKO_ORG19,
+        "Ring NO aislado 5/16 stud, cobre estanado, brazed seam x50 + 50 tubos 3:1 rojo/negro. Ubic. MW-PKO-005.",
+        "https://www.amazon.com/dp/B0F2T8LR9W",
+    ),
+    # Fork non-insulated #10 + heat shrink 3:1 — haisstronica B0F2T498YF (50 fork + 50 HST = 100PCS)
+    (
+        "CNS-FNI-10-001",
+        "Conector electrico",
+        "Fork (horquilla / non-insulated crimp)",
+        "Kit fork #10 stud AWG 12-10 + heat shrink 3:1 (50+50)",
+        "haisstronica B0F2T498YF",
+        "paquete",
+        50,
+        12,
+        "Tengo",
+        UBIC_PKO_ORG19,
+        "Fork NO aislado #10 stud, cobre estanado, brazed seam x50 + 50 tubos 3:1 rojo/negro. Ubic. MW-PKO-005.",
+        "https://www.amazon.com/dp/B0F2T498YF",
+    ),
 ]
 
 wb = Workbook()
@@ -394,7 +436,7 @@ for i, row in enumerate(INVENTARIO, 1):
     ws.cell(r, 2).font = Font(name="Consolas", size=10, bold=True)
     # Estado
     est = ws.cell(r, 9)
-    est.fill = comprado_fill if estado == "Comprado" else tengo_fill
+    est.fill = comprado_fill if estado == "Activo" else tengo_fill
 
     link_cell = ws.cell(r, 10, f"Ver en {marca}")
     link_cell.font = link_font
@@ -409,7 +451,8 @@ for i, row in enumerate(INVENTARIO, 1):
     url_cell.hyperlink = url
 
 last_inv = 4 + len(INVENTARIO)
-dv = DataValidation(type="list", formula1='"Comprado,Ya tengo"', allow_blank=False)
+# Inventario en stock: Activo. (Reservado: Baja / Prestado si se necesita despues.)
+dv = DataValidation(type="list", formula1='"Activo,Baja,Prestado"', allow_blank=False)
 ws.add_data_validation(dv)
 dv.add(f"I5:I{last_inv}")
 
@@ -616,12 +659,11 @@ wr["A4"].font = Font(name="Arial", bold=True, size=12, color="1E3A5F")
 for cell_ref, label in [
     ("A5", "Lineas de inventario (codigos)"),
     ("A6", "Unidades totales (suma Cantidad)"),
-    ("A7", "Estado: Ya tengo (lineas)"),
-    ("A8", "Estado: Comprado (lineas)"),
-    ("A9", "Pendientes de compra"),
-    ("A10", "Costo estimado pendientes (CRC)"),
-    ("A11", "Lineas de consumibles (kits)"),
-    ("A12", "Consumibles a reponer"),
+    ("A7", "Estado: Activo (lineas)"),
+    ("A8", "Pendientes de compra"),
+    ("A9", "Costo estimado pendientes (CRC)"),
+    ("A10", "Lineas de consumibles (kits)"),
+    ("A11", "Consumibles a reponer"),
 ]:
     wr[cell_ref] = label
     wr[cell_ref].font = body_font
@@ -630,30 +672,30 @@ for cell_ref, label in [
 
 wr["B5"] = len(INVENTARIO)
 wr["B6"] = sum(r[6] for r in INVENTARIO)
-wr["B7"] = f'=COUNTIF(Inventario!I5:I{last_inv},"Ya tengo")'
-wr["B8"] = f'=COUNTIF(Inventario!I5:I{last_inv},"Comprado")'
-wr["B9"] = len(PENDIENTES)
-wr["B10"] = f"=SUM(Pendientes!F5:F{last_p})"
-wr["B10"].number_format = '"₡"#,##0'
-wr["B11"] = len(CONSUMIBLES)
-wr["B12"] = f'=COUNTIF(Consumibles!J5:J{last_c},"Reponer")'
-for r in range(5, 13):
+wr["B7"] = f'=COUNTIF(Inventario!I5:I{last_inv},"Activo")'
+wr["B8"] = len(PENDIENTES)
+wr["B9"] = f"=SUM(Pendientes!F5:F{last_p})"
+wr["B9"].number_format = '"₡"#,##0'
+wr["B10"] = len(CONSUMIBLES)
+wr["B11"] = f'=COUNTIF(Consumibles!J5:J{last_c},"Reponer")'
+for r in range(5, 12):
     wr.cell(r, 2).font = Font(name="Arial", bold=True, size=12)
     wr.cell(r, 2).border = thin
     wr.cell(r, 2).alignment = center
 
-wr["A14"] = "Esquema de codigos (por LINEA)"
-wr["A14"].font = Font(name="Arial", bold=True, size=12, color="1E3A5F")
+wr["A13"] = "Esquema de codigos (por LINEA)"
+wr["A13"].font = Font(name="Arial", bold=True, size=12, color="1E3A5F")
 scheme = [
     "Inventario: MARCA-FAMILIA-###  (ej. MW-M12-001, KL-ELC-003, MW-M12-BAT-001)",
     "Un codigo = una linea, no una unidad fisica. Cantidad en columna aparte.",
+    "Estado inventario: Activo (en arsenal). Baja/Prestado opcionales. Pendientes en hoja aparte.",
     "El ### no se reutiliza. Pendientes: codigo reservado hasta comprar.",
     "Consumibles: CNS-*-### + CLASE + tipo terminal + color + UBICACION (codigo del lugar).",
     "Clases: Conector electrico | Cinta / aislante | Fijacion | Corte / desgaste | Quimico / sellado | Otro",
     "Ubicacion ejemplo: MW-PKO-005 = PACKOUT Organizer 19. Prefijos MW/KL/CNS... NO pieza a pieza.",
 ]
 for i, t in enumerate(scheme):
-    wr.cell(15 + i, 1, t).font = Font(name="Arial", size=9, color="374151")
+    wr.cell(14 + i, 1, t).font = Font(name="Arial", size=9, color="374151")
 
 wr["A22"] = "Sitios oficiales de marca"
 wr["A22"].font = Font(name="Arial", bold=True, size=12, color="1E3A5F")
@@ -662,6 +704,7 @@ brand_home = [
     ("Klein Tools", "https://www.kleintools.com/"),
     ("Knipex", "https://www.knipex.com/"),
     ("Wera", "https://www.wera.de/en"),
+    ("Holstery", "https://holstery.com/"),
     ("Huepar", "https://huepar.com/"),
     ("LEXIVON", "https://www.lexivon.com/"),
     ("Skil", "https://www.skil.com/"),

@@ -88,8 +88,28 @@ Kit: [haisstronica 50PCS Non-Insulated Butt AWG 12-10](https://www.amazon.com/dp
 
 Recomienda termocontraíble aparte para sellar.
 
+### Tipo **Ring non-insulated** (ojal / crimp sin aislante + heat shrink en kit)
+
+Kit: [haisstronica 100PCS Ring 5/16" + Heat Shrink 3:1 AWG 12-10](https://www.amazon.com/dp/B0F2T8LR9W) (B0F2T8LR9W)  
+Contenido: **50** ring (stud 5/16") + **50** tubos termocontraíbles 3:1 rojo/negro. Una línea = 50 terminales (HST incluido en el kit).
+
+| Código | Tipo terminal | Stud | AWG | Cant. | Umbral | Estado | Ubicación |
+|--------|---------------|------|-----|------:|-------:|--------|-----------|
+| CNS-RNI-516-001 | Ring (ojal / non-insulated crimp) | 5/16" | 12-10 | **50** | 12 | Tengo | MW-PKO-005 |
+
+### Tipo **Fork non-insulated** (horquilla / crimp sin aislante + heat shrink en kit)
+
+Kit: [haisstronica 100PCS Fork #10 + Heat Shrink 3:1 AWG 12-10](https://www.amazon.com/dp/B0F2T498YF) (B0F2T498YF)  
+Contenido: **50** fork (stud #10) + **50** tubos termocontraíbles 3:1 rojo/negro. Una línea = 50 terminales (HST incluido en el kit).
+
+| Código | Tipo terminal | Stud | AWG | Cant. | Umbral | Estado | Ubicación |
+|--------|---------------|------|-----|------:|-------:|--------|-----------|
+| CNS-FNI-10-001 | Fork (horquilla / non-insulated crimp) | #10 | 12-10 | **50** | 12 | Tengo | MW-PKO-005 |
+
 | Prefijo | Significado |
 |---------|-------------|
 | `CNS-BTT-*` | Butt **solder seal** (calor + estaño) |
 | `CNS-BHC-*` | Butt **heat-shrink crimp** (prensar + calor) |
 | `CNS-BNI-*` | Butt **non-insulated** (prensar, sin forro; cobre desnudo/estañado) |
+| `CNS-RNI-*` | Ring **non-insulated** (ojal + heat shrink en kit) |
+| `CNS-FNI-*` | Fork **non-insulated** (horquilla + heat shrink en kit) |
